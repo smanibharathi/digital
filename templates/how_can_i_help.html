@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Can I Help You?</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='question1.css') }}">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav>
+    
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        <span class="brand-name">Digital Mugavari</span>
+    </div>
+ <!--<div class="right-img-container">
+            <span class="hover-text">Digital Mugavari</span> 
+            <img src="{{ url_for('static', filename='right-img.png') }}" alt="Right Image" class="right-img">
+        </div>-->
+</nav>
+   
+   <!-- <button class="close-btn" onclick="goToIndex()">✖</button>-->
+
+    <div class="question-container">
+        <h1>How can i help you?</h1>
+
+        <div class="question" onclick="goToQA(1)">1. What is Digital Marketing?</div>
+        <div class="question" onclick="goToQA(2)">2. How does SEO work?</div>
+        <div class="question" onclick="goToQA(3)">3. What are social media ads?</div>
+        <div class="question" onclick="goToQA(4)">4. Why is branding important?</div>
+        <div class="question" onclick="goToQA(5)">5. What is Google Ads?</div>
+    </div>
+
+    
+    <!--  <button class="explore-btn" onclick="goToIndex()">Explore More</button>-->
+
+    <script>
+        function goToIndex() {
+            window.location.href = "{{ url_for('home') }}";
+        }
+
+        function goToQA(qNum) {
+            window.location.href = "/qa/" + qNum;
+        }
+    </script>
+
+</body>
+</html>

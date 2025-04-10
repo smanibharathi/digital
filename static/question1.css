@@ -1,0 +1,226 @@
+/* Import Creative Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+/* Full Page Background */
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Close Button (Top Right) */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Question Container */
+.question-container {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Questions - Fade-in Animation */
+.question {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: fadeSlideIn 1s forwards;
+}
+
+/* Delay Each Question */
+.question:nth-child(2) { animation-delay: 0.5s; }
+.question:nth-child(3) { animation-delay: 1s; }
+.question:nth-child(4) { animation-delay: 1.5s; }
+.question:nth-child(5) { animation-delay: 2s; }
+.question:nth-child(6) { animation-delay: 2.5s; }
+
+/* Answer Styling */
+.answer {
+    font-size: 24px;
+    font-weight: normal;
+    color: gray;
+    margin-top: 20px;
+}
+
+/* Smooth Slide & Fade-in */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Navigation Buttons */
+.button-container {
+    margin-top: 30px;
+}
+
+.nav-btn, .explore-btn {
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+    margin: 10px;
+}
+
+.nav-btn:hover, .explore-btn:hover {
+    background-color: red;
+}
+
+
+/* Navigation Bar */
+nav {
+    background-color: transparent; /* Fully transparent */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Logo & Brand Name */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 80px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Right Image & Hover Effect */
+.right-img-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Ensuring the right image stays within screen */
+.right-img {
+    height: 80px;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Text - Initially Outside and Hidden */
+.hover-text {
+    position: absolute;
+    right: 100%; /* Start completely outside to the left */
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    transition: right 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+/* On Hover: Slide Text in from Left */
+.right-img-container:hover .hover-text {
+    right: 110%; /* Moves just outside the image on hover */
+    opacity: 1;
+}
+
+
+/* Navigation Bar */
+nav {
+    background-color: transparent; /* Fully transparent */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Logo & Brand Name */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 80px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Right Image & Hover Effect */
+.right-img-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Ensuring the right image stays within screen */
+.right-img {
+    height: 80px;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Text - Initially Outside and Hidden */
+.hover-text {
+    position: absolute;
+    right: 100%; /* Start completely outside to the left */
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    transition: right 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+/* On Hover: Slide Text in from Left */
+.right-img-container:hover .hover-text {
+    right: 110%; /* Moves just outside the image on hover */
+    opacity: 1;
+}

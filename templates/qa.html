@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='question1.css') }}">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav>
+    
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        <span class="brand-name">Digital Mugavari</span>
+    </div>
+ <!--<div class="right-img-container">
+            <span class="hover-text">Digital Mugavari</span> 
+            <img src="{{ url_for('static', filename='right-img.png') }}" alt="Right Image" class="right-img">
+        </div>-->
+</nav>
+    
+   <!-- <button class="close-btn" onclick="goToIndex()">✖</button>-->
+
+    <div class="question-container">
+        <h1>{{ question }}</h1>
+        <p class="answer">{{ answer }}</p>
+    </div>
+
+    
+    <div class="button-container">
+        <button class="nav-btn" onclick="goToHowCanIHelp()">Back</button>
+
+
+
+       <!--  <button class="explore-btn" onclick="goToIndex()">Explore More</button>-->
+    </div>
+    <script>
+        function goToIndex() {
+            window.location.href = "{{ url_for('home') }}";
+        }
+
+        function goToQA(qNum) {
+            window.location.href = "/qa/" + qNum;
+        }
+
+        function goToHowCanIHelp() {
+            window.location.href = "/how-can-i-help";
+        }
+    </script>
+
+</body>
+</html>
